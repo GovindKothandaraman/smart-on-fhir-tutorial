@@ -17344,6 +17344,7 @@ BBClient.authorize = function(params, errback){
         console.log("Failed to discover authorization URL given", params);
     };
   }
+  console.log("Entering auth function");
   console.log(params);
   // prevent inheritance of tokenResponse from parent window
   delete sessionStorage.tokenResponse;
