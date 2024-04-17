@@ -17376,11 +17376,13 @@ BBClient.authorize = function(params, errback){
   }
 
   var server = urlParam("iss") || urlParam("fhirServiceUrl");
+	console.log("fhir server" + server);
   if (server){
     if (!params.server){
       params.server = server;
     }
   }
+	console.log("fhir-server" + params.server);
 
   if (urlParam("patientId")){
     params.fake_token_response = params.fake_token_response || {};
