@@ -56,8 +56,10 @@
       console.log("RES " + res);
       console.log("RES 1 " + res1);
       const endpoint = 'https://govindkothandaraman.github.io/cvim2.0/example-smart-app/launch.html';
-      const newURL = '${endpoint}?param1=${res}&param2=${res2}';
+      const newURL = '${endpoint}?param1=${res}&param2=${res1}';
+      const testURL = endpoint + "?param1=" + res + "&param2=" + res1;
       console.log("NEW URL " + newURL);
+      console.log("TEST URL " + testURL);
       fetch(newURL)
         .catch(error => {
           console.error("Error hitting given end point " + error);
