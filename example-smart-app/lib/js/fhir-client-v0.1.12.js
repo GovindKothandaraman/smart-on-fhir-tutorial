@@ -17346,6 +17346,7 @@ BBClient.authorize = function(params, errback){
   }
   console.log("Entering auth function");
   console.log("location" + location.search);
+ console.log("Window location" + window.location);
   console.log(params);
 	
   // prevent inheritance of tokenResponse from parent window
