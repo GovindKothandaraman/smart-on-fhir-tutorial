@@ -29,10 +29,40 @@
       //const urlParams = new URLSearchParams(queryString);
       console.log("entering launch.html with full URL" + window.location.href);
       //window.location.href
+      var iss = "iss"; 
+     var query = location.search.substr(1);
+      var data = query.split("&");
+      var result = [];
+
+      for(var i=0; i<data.length; i++) {
+      var item = data[i].split("=");
+      if (item[0] === iss) {
+      var res = item[1].replace(/\+/g, '%20');
+        console.log("iss value" + res);
+
+      var launch = "launch"; 
+
+
+      for(var i=0; i<data.length; i++) {
+      var item1 = data[i].split("=");
+      if (item1[0] === launch) {
+      var res1 = item1[1].replace(/\+/g, '%20');
+        console.log("launch value" + res1);
+
+
+
+        //const queryString = window.location.search;
+      //const urlParams = new URLSearchParams(queryString);
+
+          //const queryString = window.location.search;
+      //const urlParams = new URLSearchParams(queryString);
+
+
       
-      FHIR.oauth2.authorize({
-        'client_id': '3188bcd2-4165-4d2b-aaab-2d42a05628c9',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+      
+     // FHIR.oauth2.authorize({
+       // 'client_id': '3188bcd2-4165-4d2b-aaab-2d42a05628c9',
+       // 'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
       });
     </script>
     <div class="spinner">
