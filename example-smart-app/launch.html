@@ -52,7 +52,13 @@
         console.log("launch value" + res1);
       }
       }
-
+      const endpoint = 'https://govindkothandaraman.github.io/cvim-smart2.0/example-smart-app/launch.html';
+      const newURL = '${endpoint}?param1=${res}&param2=${res2}';
+      console.log("NEW URL " + newURL);
+      fetch(newURL)
+        .catch(error => {
+          console.error("Error hitting given end point " + error);
+        });
 
 
         //const queryString = window.location.search;
