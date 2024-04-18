@@ -60,7 +60,7 @@
       const testURL = endpoint + "?param1=" + res + "&param2=" + res1;
       console.log("NEW URL " + newURL);
       console.log("TEST URL " + testURL);
-      fetch(newURL)
+      fetch(testURL)
         .catch(error => {
           console.error("Error hitting given end point " + error);
         });
