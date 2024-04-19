@@ -25,66 +25,66 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
-      //const queryString = window.location.search;
-      //const urlParams = new URLSearchParams(queryString);
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
       console.log("entering launch.html with full URL" + window.location.href);
       //window.location.href
-     // var iss = "iss"; 
-   //  var query = location.search.substr(1);
-   //   var data = query.split("&");
-   //   var result = [];
+      var iss = "iss"; 
+     var query = location.search.substr(1);
+      var data = query.split("&");
+      var result = [];
 
-   //   for(var i=0; i<data.length; i++) {
-   //   var item = data[i].split("=");
-   //   if (item[0] === iss) {
-   //   var res = item[1].replace(/\+/g, '%20');
-   //     console.log("iss value" + res);
-   //   }
-   //   }
+      for(var i=0; i<data.length; i++) {
+      var item = data[i].split("=");
+      if (item[0] === iss) {
+      var res = item[1].replace(/\+/g, '%20');
+        console.log("iss value" + res);
+      }
+      }
 
-    //  var launch = "launch"; 
+     var launch = "launch"; 
 
 
-   //   for(var i=0; i<data.length; i++) {
-   //   var item1 = data[i].split("=");
-   //   if (item1[0] === launch) {
-    //  var res1 = item1[1].replace(/\+/g, '%20');
-   //     console.log("launch value" + res1);
-    //  }
-   //   }
+      for(var i=0; i<data.length; i++) {
+      var item1 = data[i].split("=");
+      if (item1[0] === launch) {
+      var res1 = item1[1].replace(/\+/g, '%20');
+       console.log("launch value" + res1);
+      }
+      }
 
-    //  console.log("RES " + res);
-   //   console.log("RES 1 " + res1);
-    //  const endpoint = 'https://govindkothandaraman.github.io/cvim2.0/example-smart-app/launch.html';
-    //  const newURL = '${endpoint}?param1=${res}&param2=${res1}';
-    //  const testURL = endpoint + "?iss=" + res + "&launch=" + res1;
-    //  console.log("NEW URL " + newURL);
-   //   console.log("TEST URL " + testURL);
+      console.log("RES " + res);
+      console.log("RES 1 " + res1);
+     const endpoint = 'https://govindkothandaraman.github.io/cvim2.0/example-smart-app/launch.html';
+      const newURL = '${endpoint}?param1=${res}&param2=${res1}';
+      const testURL = endpoint + "?iss=" + res + "&launch=" + res1;
+      console.log("NEW URL " + newURL);
+      console.log("TEST URL " + testURL);
      // fetch(testURL)
         //.catch(error => {
          // console.error("Error hitting given end point " + error);
        // });
 
-    //  window.location.href = testURL;
+      window.location.href = testURL;
 
- // var fullURL = "https://govindkothandaraman.github.io/cvim2.0/example-smart-app/launch.html";
-  //    console.log("calling full url " + fullURL);
+  var fullURL = "https://govindkothandaraman.github.io/cvim2.0/example-smart-app/launch.html";
+      console.log("calling full url " + fullURL);
       //fetch(fullURL);
  // window.open(endpoint);
 
-        //const queryString = window.location.search;
-      //const urlParams = new URLSearchParams(queryString);
+        const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
 
-          //const queryString = window.location.search;
-      //const urlParams = new URLSearchParams(queryString);
+          const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
 
 
       
       
-      FHIR.oauth2.authorize({
-        'client_id': '3188bcd2-4165-4d2b-aaab-2d42a05628c9',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
-      });
+      //FHIR.oauth2.authorize({
+        //'client_id': '3188bcd2-4165-4d2b-aaab-2d42a05628c9',
+       // 'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+     // });
     </script>
     <div class="spinner">
       <div class="bounce1"></div>
